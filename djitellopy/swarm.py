@@ -5,7 +5,7 @@ from threading import Thread, Barrier
 from queue import Queue
 from typing import List, Callable
 
-from .tello import Tello, TelloException
+from .tello import Tello
 from .enforce_types import enforce_types
 
 
@@ -40,7 +40,7 @@ class TelloSwarm:
             ips: list of IP Addresses
         """
         if not ips:
-            raise TelloException("No ips provided")
+            raise ValueError("No ips provided")
 
         tellos = []
         for ip in ips:

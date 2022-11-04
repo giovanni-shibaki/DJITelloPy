@@ -575,7 +575,6 @@ class Tello:
         when your computer is connected to Tello-XXXXXX WiFi ntwork).
         Currently Tello EDUs do not support video streaming while connected
         to a WiFi-network.
-
         !!! Note:
             If the response is 'Unknown command' you have to update the Tello
             firmware. This can be done using the official Tello app.
@@ -702,12 +701,10 @@ class Tello:
 
     def curve_xyz_speed(self, x1: int, y1: int, z1: int, x2: int, y2: int, z2: int, speed: int):
         """Fly to x2 y2 z2 in a curve via x2 y2 z2. Speed defines the traveling speed in cm/s.
-
         - Both points are relative to the current position
         - The current position and both points must form a circle arc.
         - If the arc radius is not within the range of 0.5-10 meters, it raises an Exception
         - x1/x2, y1/y2, z1/z2 can't both be between -20-20 at the same time, but can both be 0.
-
         Arguments:
             x1: -500-500
             x2: -500-500
@@ -735,12 +732,10 @@ class Tello:
 
     def curve_xyz_speed_mid(self, x1: int, y1: int, z1: int, x2: int, y2: int, z2: int, speed: int, mid: int):
         """Fly to x2 y2 z2 in a curve via x2 y2 z2. Speed defines the traveling speed in cm/s.
-
         - Both points are relative to the mission pad with id mid.
         - The current position and both points must form a circle arc.
         - If the arc radius is not within the range of 0.5-10 meters, it raises an Exception
         - x1/x2, y1/y2, z1/z2 can't both be between -20-20 at the same time, but can both be 0.
-
         Arguments:
             x1: -500-500
             y1: -500-500
